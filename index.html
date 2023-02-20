@@ -11,17 +11,20 @@
 
 
     <div id="app">
-        {{ text }}
     </div>
 
     <script>
-        Vue.createApp({
+        const vm = Vue.createApp({
             data(){
                 return {
-                    text: "Hola VueJS"
+                    text: " <h1> Hola VueJS </h1>"
                 };
-            }
+            },
+            template: '<div v-once v-html="text" ></div>'
+
         }).mount("#app");
+        
+
     </script>
 </body>
 </html>
