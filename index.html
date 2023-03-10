@@ -11,32 +11,19 @@
 
 
     <div id="app">
-        <p ></p>
+        
     </div>
 
     <script>
         const vm = Vue.createApp({
             data(){
                 return {
-                    text: " <h1> Hola VueJS </h1>",
-                    counter: 0
+                    text: " Hola Vue"
                 };
             },
-            template:
-                '<button v-on:click="increment">Aumentar ++ </button>'+
-                '<p>{{ counter}}</p>'+
-               '<button v-on:click="decrement">Disminuir -- </button>',
-           
-            methods:{
-                increment(){
-                    this.counter++;
-                    
-                },
-                decrement(){
-                    this.counter--;
-                }
-            }
-
+            template: 
+            '<p>{{ text }}</p>'+
+            '<input v-model="text"/>'
         }).mount("#app");
         
 
