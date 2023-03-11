@@ -25,7 +25,7 @@
             template: `
                 <div>
                     <p>{{text}}</p>
-                    <v-input v-bind:value="text" v-on:input="recibirEmit" />
+                    <v-input v-model:value="text" />
                 </div>
             `
         });
@@ -36,7 +36,7 @@
             },
             methods:{
                 enviarinput(e){
-                   this.$emit("recibirEmit", e.target.value)
+                   this.$emit("update:value", e.target.value)
                 }
             },
             template: `
